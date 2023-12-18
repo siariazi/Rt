@@ -1,5 +1,4 @@
 #library(devtools)
-#install_github("snailvet/OOPidemic", auth_token = "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")
 library(OOPidemic)
 
 # set up a reference strain with a randomised genome
