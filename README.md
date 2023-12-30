@@ -24,7 +24,7 @@ Prior: \
 Expand the options for Tree.t:alpha: Enter 36.5 (or whatever is recover_rate) for Become Uninfectious Rate (again I skip this) \
 Set a Log Normal prior for both origin parameters with M = -0.5 and S = 0.2 \
 reproductiveNumber_BDSKY: lognormal with M: 0.8 and S: 0.5 \
-samplingProportion_BDSKY: beta distn. Alpha: 2 beta: 1000 \
+samplingProportion_BDSKY: beta distn. Alpha: 2 beta: 1000 
 
 
 
