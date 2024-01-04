@@ -8,6 +8,9 @@ group_vingnett.rmd: Chris’s vingnett to show the package OOpidemic. \
 seq_over_time.R: plotting the number of sequences over time from a fasta file. \
 add_date_before.R: using metadata from OOPidemic to add date to fasta file. In this file I flip the dates from simulation, means that if time is 0 I convert it to max_time-0, when using fasta file generated from this script, in BEAUTi when setting tip dates, “before the present” (2nd) option should be used. \
 add_date_since.R: like add_date_before.R, when using fasta file generated from this script, in BEAUTi when setting tip dates, “since some time in the past” (1st) option should be used. I prefer this version. \
+Example of data is Scen02A_popsz10K_initSus15_wgs_full.fasta and Scen02A_popsz10K_initSus15_wgs_metadata.csv \
+sampling_meta.R: This is a file that goes over meta data (like Scen02A_popsz10K_initSus15_wgs_metadata.csv) and does different samplings. For example with different proportions and saves the new meta data, summary of recurrence and the new fasta file. The new fasta and meta data files should be later be oppened with Add_date_since.R to add date to the fasta file. \
+meta_fasta.R: I use this file when I have id's of sampling files to make a fast file that corrosponds to the meta data. In case where I don't do the sampling with sampling_meta.R \
 bdsky_example_cond.rmd: estimating Re from beast results. The script is written by Louis du Plessis. In this version we are not estimating the time of origin and tree height should be given from opening the log file in tracer. \
 bdsky_example_regular.rmd: estimating Re from beast results. The script is written by Louis du Plessis. In this version we are estimating the time of origin (I prefer this version). \
 Workflow: metadata and fasta file from OOPidemic package should be combined together (add_data_since.R), then run the BESAT using the config explanined below and finally post-analysis using bdsky_example_regular.rmd. \
