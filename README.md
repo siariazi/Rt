@@ -10,7 +10,7 @@ add_date_before.R: using metadata from OOPidemic to add date to fasta file. In t
 add_date_since.R: like add_date_before.R, when using fasta file generated from this script, in BEAUTi when setting tip dates, “since some time in the past” (1st) option should be used. I prefer this version. \
 bdsky_example_cond.rmd: estimating Re from beast results. The script is written by Louis du Plessis. In this version we are not estimating the time of origin and tree height should be given from opening the log file in tracer. \
 bdsky_example_regular.rmd: estimating Re from beast results. The script is written by Louis du Plessis. In this version we are estimating the time of origin (I prefer this version). \
-Workflow: metadata and fasta file from OOPidemic package should be combined together (add_data_since.R), then run the BESAT using the config explanined below and finally post-analysis using bdsky_example_regular.rmd. 
+Workflow: metadata and fasta file from OOPidemic package should be combined together (add_data_since.R), then run the BESAT using the config explanined below and finally post-analysis using bdsky_example_regular.rmd. \\
 Configuring the BEAUti file: \
 In setting Tip Dates be careful to choose since some time in the past. \
 Site model: subst model: HKY \
