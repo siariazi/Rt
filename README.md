@@ -27,7 +27,17 @@ Prior: \
 Expand the options for Tree.t:alpha: Enter 36.5 (or whatever is recover_rate) for Become Uninfectious Rate (again I skip this) \
 Set a Log Normal prior for both origin parameters with M = -0.5 and S = 0.2 \
 reproductiveNumber_BDSKY: lognormal with M: 0.8 and S: 0.5 \
-samplingProportion_BDSKY: beta distn. Alpha: 2 beta: 1000 
+samplingProportion_BDSKY: beta distn. Alpha: 2 beta: 1000 \
+Sampling_add_date.R: A final script that combines sampling_meta.R and add_date_since.R. This code reads the fasta files generated from OOPidemic package. It adds date from meta data, Does the sampling in four different ways: 1-optimal (which is a rate where we can have 400 sequence+sampling 1 individuals from time points that their chance to be sampled is less than 1 individuals, so we make sure all the time points are sampled), 2- High rate which is total random with rate 0.7 times the optimal rate. 3- Low rate which is total random with rate 0.3 times the optimal rate. 4- High (0.7) to Low (0.3), 5 - Low (0.3) to High (0.7). Finally the script reads a template .xml file that was generated using BDSKY Birth Death skyline serial (expalined above). This step makes the .xml files ready to be run by BEAST in terminal using this command:\
+cd /Users/siavashriazi/SFU/Rt/Rt\ codes/Chris/data/data_outbreaks/1
+
+BEAST_PATH="/Applications/BEAST 2.7.3/bin/beast"
+"$BEAST_PATH" outbreak_002_wgs_opt_prop_0.07_lim_14.xml
+Last step:
+bdsky_short.R: a script to the post-analysis from the beast run. 
+ 
+
+
 
 
 
